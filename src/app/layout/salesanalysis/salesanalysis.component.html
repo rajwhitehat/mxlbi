@@ -1,0 +1,96 @@
+<div>
+    <!-- <form name="form" [formGroup]="form" #dashboardForm = "ngForm"> -->
+    <div class="row header">
+        <div class="col-md-4">
+            <h2 class="main">Sales Analysis</h2>
+        </div>
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <button id="btnPopup1" style="display:none;" (click)="open(content)"></button>
+        </div>
+
+        <ngb-alert [type]="alert.type" (close)="closeAlert(alert)" *ngFor="let alert of alerts">{{ alert.message }}</ngb-alert>
+
+    </div>
+    <div class="custom_checkbox_section" style="width: 100%; text-align:center">
+        <label>Search By Brand:</label>
+    <span *ngFor="let brand of brands;">
+        <input  type="checkbox" (click)="globalFilters(brand, $event)" /> <label for="{{brand}}"> {{brand}} </label>
+    </span>
+    </div>
+    <div class="row special">
+        <div class="col-lg-6">
+            <app-linechartas [childMessage]="'Weekly Sales Data by Value-Overall'" [id]="'lineChart1'" [inputvFilterData]="vlineChartasFilterData"></app-linechartas>
+        </div>
+        <div class="col-lg-6">
+            <div class="card mb-3">
+                <div class="card-header" style="background-color: #e2e2e2; font-weight: bold;">
+                    <i class="fa fa-tasks fa-fw"></i> Weekly Sales Data by Value - Zone
+                </div>
+                <!--<canvas id="stackedBar"></canvas> -->
+                <div class="custom_checkbox_section" style="width: 100%; text-align:center;background-color: #262020;">
+
+                    <input type="checkbox" (click)="filterByValue('zone','North', $event);" /> <label for="north"> North </label>
+                    <input type="checkbox" (click)="filterByValue('zone','East',$event)" /> <label for="east"> East </label>
+                    <input type="checkbox" (click)="filterByValue('zone','West',$event)" /> <label for="west"> West </label>
+                    <input type="checkbox" (click)="filterByValue('zone','South',$event)" /> <label for="south"> South </label>
+
+                </div>
+
+                <canvas id="myChart" style="background-color: #262020;"></canvas>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="card mb-3">
+                <div class="card-header" style="background-color: #e2e2e2; font-weight: bold;">
+                    <i class="fa fa-tasks fa-fw"></i> Weekly Sales Data by Value - Price
+                </div>
+                <div class="custom_checkbox_section" style="width: 100%; text-align:center">
+
+                    <input type="checkbox" (click)="filterByValue('price','less=2k', $event)" /> <label for="less=2k"> less=2k </label>
+                    <input type="checkbox" (click)="filterByValue('price','2-3k', $event)" /> <label for="2-3k"> 2-3k </label>
+                    <input type="checkbox" (click)="filterByValue('price','3-4k', $event)" /> <label for="3-4k"> 3-4k </label>
+                    <input type="checkbox" (click)="filterByValue('price','4-6k', $event)" /> <label for="4-6k"> 4-6k </label>
+                    <!-- <input type="checkbox" (click)="filterByValue('price','8-10k')" /> <label for="8-10k"> 8-10k </label> -->
+
+                </div>
+                <!-- <svg width="960" height="500"></svg>            -->
+                <canvas id="stackedBarPrice" style="background-color: #262020;"></canvas>
+
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <app-linechartas [childMessage]="'Sales Data for top 9 Selling Models by Value'" [id]="'lineChart2'" [inputvFilterData]="vlineChartasFilterData"></app-linechartas>
+        </div>
+        <!-- <div class="col-lg-6">
+            <div class="card mb-3">
+                <div class="card-header" style="background-color: #e2e2e2; font-weight: bold;">
+                    <i class="fa fa-tasks fa-fw"></i>Weekly Sales Data by Value – Price
+                </div>
+                <div width="960" height="500" id="scrollablebarchart">
+                    <div id="chart"></div>
+                    <div id="xaxis"></div>
+                </div>
+            </div>
+        </div> -->
+        <!-- <div class="col-lg-6">
+            <div class="card mb-3">
+                <div class="card-header" style="background-color: #e2e2e2; font-weight: bold;">
+                    <i class="fa fa-tasks fa-fw"></i> Sales Data for Top 10 Selling Models by Value
+                </div>
+                <div width="960" id="stackedbar" height="500"></div>
+            </div>
+        </div> -->
+        <div class="col-lg-12">
+            <div class="card mb-3">
+                <div class="card-header" style="background-color: #e2e2e2; font-weight: bold;">
+                    <i class="fa fa-tasks fa-fw"></i> Vartical Bar Chart
+                </div>
+                <div width="960" height="500">
+                    <p id="varticalBar"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- </form> -->
+</div>

@@ -1,0 +1,25 @@
+
+<div>
+    <!-- <form name="form" [formGroup]="form" #dashboardForm = "ngForm"> -->
+        <div class="row header">
+            <div class="col-md-4"><h2 class="main">SM Profiling</h2></div>
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <button  id="btnPopup1"  style="display:none;" (click)="open(content)"></button>                                             
+            </div>
+       
+            <ngb-alert [type]="alert.type" (close)="closeAlert(alert)" *ngFor="let alert of alerts">{{ alert.message }}</ngb-alert>
+          
+        </div>
+            <div class="row special">
+                <div class="col-lg-12">
+                <div class="card mb-3">
+                    <div class="card-header" style="background-color: #e2e2e2; font-weight: bold;">
+                        <i class="fa fa-tasks fa-fw"></i>Chord
+                    </div>                  
+                    <svg width="1200" height="1200" class="chordChart" id="chordChart"></svg>         
+                </div>
+                </div>       
+            </div>
+            <!-- </form> -->
+            </div>

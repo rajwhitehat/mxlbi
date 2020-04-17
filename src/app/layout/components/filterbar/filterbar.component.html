@@ -1,0 +1,58 @@
+<nav class="sidebar" [ngClass]="{sidebarPushRight: !isActive, collapsed: collapsed}">
+  <div class="list-group">
+      <a class="list-group-item">         
+          <span>
+              <!-- <form> -->
+            <div class="form-group">
+                <label for="inputEmail">Analysis Type</label> 
+                <div class="input-group ">
+                    <select class="mdb-select md-form" class="form-control" style="width:200px;height:35px ;" [(ngModel)]="analysisTypeSelectedValue"  id="orders">
+                        <option *ngFor="let order of orders; let i = index" [value]="orders[i].id">
+                          {{orders[i].name}}
+                        </option>
+                      </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputEmail">From Date</label>
+                <div class="input-group datepicker-input">
+                    <input class="form-control" placeholder="yyyy-mm-dd" [placement]="'bottom-left'"
+                        name="dp"  ngbDatepicker #fromDate="ngbDatepicker" (dateSelect) = "onSelect($event,1)">
+                    <button class="input-group-addon" (click)="fromDate.toggle()" type="button">            
+                        <span class="fa fa-calendar"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword">To Date</label>
+                <div class="input-group datepicker-input">
+                    <input class="form-control" placeholder="yyyy-mm-dd" [placement]="'bottom-left'"
+                        name="dp"  ngbDatepicker #toDate="ngbDatepicker"  (dateSelect) = "onSelect($event,2)">
+                    <button class="input-group-addon" (click)="toDate.toggle()" type="button">            
+                        <span class="fa fa-calendar"></span>
+                    </button>
+                </div>
+            </div>   
+            <div class="form-group">
+                <label for="inputPassword">Category</label>
+                <div class="input-group datepicker-input">
+                    <input type="text" [(ngModel)]="category" class="form-control" >                    
+                </div>
+            </div>  
+            <div class="form-group">
+                <label for="inputPassword">Region</label>
+                <div class="input-group datepicker-input">
+                    <input type="text" [(ngModel)]="region" class="form-control" >                    
+                </div>
+            </div>                         
+            <button type="submit" class="btn btn-primary" style="background-color: #343a40;" (click)="applyFilter()">Search</button>
+        <!-- </form> -->
+    </span>
+      </a>
+  </div>
+  <div class="toggle-button" [ngClass]="{collapsed: collapsed}" (click)="toggleCollapsed()" style="margin-left:-60px;width:60px;">
+      <i class="fa fa-fw {{collapsed?'fa-search':'fa-angle-double-right'}}"></i>&nbsp;
+      <span><!--{{ 'Collapse Filter Area' | translate }}--></span>
+     
+  </div>
+</nav>

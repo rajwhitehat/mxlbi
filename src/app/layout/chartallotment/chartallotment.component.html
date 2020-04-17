@@ -1,0 +1,66 @@
+<form name="form" [formGroup]="form" >
+<div>
+    <!-- <form name="form" [formGroup]="form" > -->
+        <div class="row header">
+            <div class="col-md-4">
+                <h2 class="main">Chart Allotment</h2>
+            </div>
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <button id="btnPopup1"  style="display:none;" (click)="open(content)"></button>
+            </div>
+            
+        </div>
+        <ngb-alert [type]="alert.type" (close)="closeAlert(alert)" *ngFor="let alert of alerts">{{ alert.message }}
+        </ngb-alert>
+
+<div class="container-fluid">
+    <label for="orders">Form : &nbsp;</label>
+    <select class="mdb-select md-form" style="width:200px ;" formControlName="orders" id="orders">
+      <option *ngFor="let order of orders; let i = index" [value]="orders[i].id">
+        {{orders[i].name}}
+      </option>
+    </select>&nbsp;
+    <button (click)="saveUserwiseChartDtls()" style="margin-bottom: 5px;" class="btn btn-primary">Save</button>
+</div>
+<div id="chartContainer" *ngIf="loadGrid" style="height: 780px;">
+    <div class="outer">
+        <div style="height: 100%;" class="inner-col" (dragover)="gridDragOver($event)"
+             (drop)="gridDrop($event,'left')">
+            <ag-grid-angular
+                    style="height: 750px;width:100%;padding-right:0px;"
+                    class="ag-theme-balham"
+                    [gridOptions]="leftGridOptions"
+                    [columnDefs]="columnDefs"
+                    [modules]="modules"
+                    (firstDataRendered)="onFirstDataRendered($event)">
+            </ag-grid-angular>
+        </div>
+
+        <div class="inner-col factory-panel">
+            <span id="eBin" (dragover)="binDragOver($event)" (drop)="binDrop($event)" class="factory factory-bin">               
+                <i class="fa fa-trash" aria-hidden="true"style="font-size:18px;color:red"><span class="filename"> Trash - </span></i>
+                Drop target to destroy row
+            </span>           
+        </div>
+
+        <div style="height: 100%;" class="inner-col" (dragover)="gridDragOver($event)"
+             (drop)="gridDrop($event,'right')">
+            <ag-grid-angular
+                    style="height: 750px;width:100%;padding-right:0px;"
+                    class="ag-theme-balham"
+                    [gridOptions]="rightGridOptions"
+                    [columnDefs]="columnDefs"
+                    [modules]="modules"
+                    (firstDataRendered)="onFirstDataRendered($event)">
+            </ag-grid-angular>
+        </div>
+    </div>
+</div>
+    <!-- </form> -->
+    </div>
+    </form>
+
+
+
+    

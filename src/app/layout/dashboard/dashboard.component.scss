@@ -1,0 +1,183 @@
+body {
+    font-family: Sans-serif;
+    font-size: 11px;
+}
+.slice {
+    cursor: pointer;
+}
+
+.slice .main-arc {
+    stroke: #fff;
+    stroke-width: 1px;
+}
+
+.slice .hidden-arc {
+    fill: none;
+}
+
+.slice text {
+    pointer-events: none;
+    dominant-baseline: middle;
+    text-anchor: middle;
+}
+text{
+	font-size:12px;
+}
+.mainBars rect{
+  shape-rendering: auto;
+  fill-opacity: 0;
+  stroke-width: 0.5px;
+  stroke: rgb(0, 0, 0);
+  stroke-opacity: 0;
+}
+.subBars{
+	shape-rendering:crispEdges;
+}
+.edges{
+	stroke:none;
+	fill-opacity:0.5;
+}
+.header{
+	text-anchor:middle;
+	font-size:16px;
+}
+line{
+	stroke:grey;
+}
+h2.main{line-height: 26px;}
+// text{
+// 	font-size:12px;
+// }
+// .mainBars rect{
+//   shape-rendering: auto;
+//   fill-opacity: 0;
+//   stroke-width: 0.5px;
+//   stroke: rgb(0, 0, 0);
+//   stroke-opacity: 0;
+// }
+// .subBars{
+// 	shape-rendering:crispEdges;
+// }
+// .edges{
+// 	stroke:none;
+// 	fill-opacity:0.5;
+// }
+// .header{
+// 	text-anchor:middle;
+// 	font-size:16px;
+// }
+// line{
+// 	stroke:grey;
+// }
+// // // Sunburst for your skill start
+// // body {
+// // 	font-family: 'Open Sans', sans-serif;
+// // 	font-size: 12px;
+// // 	font-weight: 400;
+// // 	background-color: #fff;
+// // 	width: 1000px;
+// // 	height: 700px;
+// // 	margin-top: 10px;
+// //   }
+// //   #skillmap .skills-wrapper {
+// // 	margin-top: 10px;
+// // 	overflow: auto;
+// //   }
+// //   #skillmap .skills-sunburst {
+// // 	float: left;
+// // 	width: 500px;
+// // 	margin-left: -80px;
+// //   }
+// //   #skillmap .skills-sunburst svg {
+// // 	font: 11px 'Source Sans Pro', sans-serif;
+// // 	font-weight: 900;
+// // 	cursor: pointer;
+// //   }
+// //   #skillmap .skills-chart {
+// // 	float: right;
+// // 	font-family: 'Source Sans Pro', sans-serif;
+// // 	font-size: 15px;
+// // 	margin: 80px 20px 0 0;
+// //   }
+// //   #skillmap .skills-chart .breadcumb-text {
+// // 	font-size: 13px;
+// // 	font-weight: 700;
+// //   }
+// //   #skillmap .skills-chart #skills-chart-line {
+// // 	fill: none;
+// // 	stroke-width: 3.5px;
+// //   }
+// //   #skillmap .skills-chart .axis path,
+// //   #skillmap .skills-chart .axis line {
+// // 	fill: none;
+// //   }
+// //   #skillmap .skills-chart .x-axis path,
+// //   #skillmap .skills-chart .y-axis path {
+// // 	stroke: #444;
+// // 	stroke-width: 1px;
+// // 	shape-rendering: geometricPrecision;
+// //   }
+// //   //skill
+// //   body {
+// // 	font-family: 'Open Sans', sans-serif;
+// // 	font-size: 12px;
+// // 	font-weight: 400;
+// // 	background-color: #fff;
+// // 	width: 1000px;
+// // 	height: 700px;
+// // 	margin-top: 10px;
+// //   }
+// //   #skillmap .skills-wrapper {
+// // 	margin-top: 10px;
+// // 	overflow: auto;
+// //   }
+// //   #skillmap .skills-sunburst {
+// // 	float: left;
+// // 	width: 500px;
+// // 	margin-left: -80px;
+// //   }
+// //   #skillmap .skills-sunburst svg {
+// // 	font: 11px 'Source Sans Pro', sans-serif;
+// // 	font-weight: 900;
+// // 	cursor: pointer;
+// //   }
+// //   #skillmap .skills-chart {
+// // 	float: right;
+// // 	font-family: 'Source Sans Pro', sans-serif;
+// // 	font-size: 15px;
+// // 	margin: 80px 20px 0 0;
+// //   }
+// //   #skillmap .skills-chart .breadcumb-text {
+// // 	font-size: 13px;
+// // 	font-weight: 700;
+// //   }
+// //   #skillmap .skills-chart #skills-chart-line {
+// // 	fill: none;
+// // 	stroke-width: 3.5px;
+// //   }
+// //   #skillmap .skills-chart .axis path,
+// //   #skillmap .skills-chart .axis line {
+// // 	fill: none;
+// //   }
+// //   #skillmap .skills-chart .x-axis path,
+// //   #skillmap .skills-chart .y-axis path {
+// // 	stroke: #444;
+// // 	stroke-width: 1px;
+// // 	shape-rendering: geometricPrecision;
+// //   }
+
+
+.custom_tabs button.active {
+    background: #337ab7;
+    color: #fff;
+}
+.custom_tabs {
+    margin-bottom: 10px;
+    /* border-bottom: 1px solid #ddd; */
+}
+.custom_tabs button {
+    margin-right: 5px;
+    border: 0;
+    padding: 8px 16px;
+    border-radius: 5px;
+}

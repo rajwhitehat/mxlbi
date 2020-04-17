@@ -1,0 +1,23 @@
+<div [@routerTransition] >
+    <form name="form" [formGroup]="form" #chartsForm = "ngForm">
+    <div class="row header">
+        <div class="col-md-4"><h2 class="main">Snippets</h2></div>
+        <div class="col-md-4"></div>
+        <div class="col-md-4" style="display:none;">                                            
+        </div>
+        <div class="col-md-4" style="text-align: right;">           
+        </div>
+    </div>
+   <div class="row special">
+        <div class="card col-12 mb-3">
+            <div class="card-header after-heading" style="background-color: #e2e2e2; font-weight: bold;">
+                <i class="fa fa-paper-plane-o fa-fw"></i>Chord Graph
+            </div>
+            <div class="card-body">
+            <div id="chart"></div> 
+        </div>
+    </div>
+    
+</div>
+</form>
+</div>

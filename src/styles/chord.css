@@ -1,0 +1,115 @@
+body {
+    font: 10px sans-serif;
+  }
+  
+  svg text{
+    fill:black;
+    font-size:11px;
+  }
+  svg .values text{
+    pointer-events:none;
+    stroke-width: 0.5px;
+  }
+  .groups:hover{
+    cursor:pointer;
+    font-weight:bold;
+  }
+/* for ag grid */
+.ag-cell-wrapper span.ag-cell-value {
+  font-size: 20px;
+  padding: 10px 25px 10px 50px;
+  background: #689ce9;
+  border-radius: 10px;
+  margin: 5px;
+  display: inline-block;
+  color: #fff;
+  text-align: left;
+  position: relative;
+  width:270px;
+}
+.ag-cell-wrapper span.ag-cell-value:hover{
+  background:#3366f3;
+}
+.ag-cell-wrapper span.ag-cell-value:before {
+  content: '\f0c9';
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  font-family: fontawesome;
+}
+
+/*vartical bar chart*/
+.bar--positive {
+	fill: #9BCCF5;
+  }
+  
+  .bar--negative {
+	fill: pink;
+  }
+  
+  text {
+	font: 10px sans-serif;
+  }
+  .tick text {
+	fill: #000;
+  }
+  
+  .axis path,
+  .axis line {
+	fill: none;
+	stroke: #909090;
+	shape-rendering: crispEdges;
+  }
+  
+  .title {
+	font-size: 13px;
+	font-weight:bold;
+  }
+
+  .bar--1 {
+  fill: #9BCCF5;
+}
+
+.bar--2 {
+  fill: pink;
+}
+.bar--3 {
+  fill: yellow;
+}
+.bar--4 {
+  fill: green;
+}
+.bar--5 {
+  fill:white;
+}
+text {
+  font: 10px sans-serif;
+}
+.tick text {
+  fill: #000;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #909090;
+  shape-rendering: crispEdges;
+}
+
+.title {
+  font-size: 13px;
+  font-weight:bold;
+}
+/* Geo rnd */
+
+h1{font: small-caps 300 2em/1.5em 'Open Sans', sans-serif; text-align: center;margin: 20px auto 0;padding: 0;}
+.land{ fill: #ccc; }
+.border-states{
+	stroke: #fff;
+	fill: none;
+	stroke-linejoin: round;
+	stroke-linecap: round;
+}
+.states{fill: #aec7e8;}
+.bubble{fill:red; fill-opacity: .5;}
+.hover{stroke:#666; fill-opacity: .8;}

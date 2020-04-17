@@ -1,0 +1,85 @@
+State,AgeGroup,Year,Value
+North,Under 5 Years,1990,2704659
+North,Under 5 Years,2000,2677612
+North,Under 5 Years,2010,2623519
+North,5 to 13 Years,1990,4499890
+North,5 to 13 Years,2000,5489866
+North,5 to 13 Years,2010,7469817
+North,14 to 17 Years,1990,2159981
+North,14 to 17 Years,2000,2635177
+North,14 to 17 Years,2010,3585568
+North,18 to 24 Years,1990,3853788
+North,18 to 24 Years,2000,4624546
+North,18 to 24 Years,2010,6166061
+North,25 to 44 Years,1990,10604510
+North,25 to 44 Years,2000,12513322
+North,25 to 44 Years,2010,16330945
+North,45 to 64 Years,1990,8819342
+North,45 to 64 Years,2000,7937408
+North,45 to 64 Years,2010,6173539
+North,65 Years and Over,1990,4114496
+North,65 Years and Over,2000,4443656
+North,65 Years and Over,2010,5101975
+East,Under 5 Years,1990,2027307
+East,Under 5 Years,2000,2290857
+East,Under 5 Years,2010,2817957
+East,5 to 13 Years,1990,3277946
+East,5 to 13 Years,2000,2884592
+East,5 to 13 Years,2010,2097885
+East,14 to 17 Years,1990,1420518
+East,14 to 17 Years,2000,1434723
+East,14 to 17 Years,2010,1463134
+East,18 to 24 Years,1990,2454721
+East,18 to 24 Years,2000,2111060
+East,18 to 24 Years,2010,1423738
+East,25 to 44 Years,1990,7017731
+East,25 to 44 Years,2000,6666844
+East,25 to 44 Years,2010,5965071
+East,45 to 64 Years,1990,5656528
+East,45 to 64 Years,2000,7070660
+East,45 to 64 Years,2010,9898924
+East,65 Years and Over,1990,2472223
+East,65 Years and Over,2000,2472223
+East,65 Years and Over,2010,2472223
+West,Under 5 Years,1990,1208495
+West,Under 5 Years,2000,1087646
+West,Under 5 Years,2010,845947
+West,5 to 13 Years,1990,2141490
+West,5 to 13 Years,2000,2655448
+West,5 to 13 Years,2010,3683363
+West,14 to 17 Years,1990,1058031
+West,14 to 17 Years,2000,1227316
+West,14 to 17 Years,2010,1565886
+West,18 to 24 Years,1990,1999120
+West,18 to 24 Years,2000,2159050
+West,18 to 24 Years,2010,2478909
+West,25 to 44 Years,1990,5355235
+West,25 to 44 Years,2000,5622997
+West,25 to 44 Years,2010,6158520
+West,45 to 64 Years,1990,5120254
+West,45 to 64 Years,2000,6349115
+West,45 to 64 Years,2010,8806837
+West,65 Years and Over,1990,2607672
+West,65 Years and Over,2000,2946669
+West,65 Years and Over,2010,3624664
+South,Under 5 Years,1990,1140516
+South,Under 5 Years,2000,1231757
+South,Under 5 Years,2010,1414240
+South,5 to 13 Years,1990,1938695
+South,5 to 13 Years,2000,2287660
+South,5 to 13 Years,2010,2985590
+South,14 to 17 Years,1990,925060
+South,14 to 17 Years,2000,1063819
+South,14 to 17 Years,2010,1341337
+South,18 to 24 Years,1990,1607297
+South,18 to 24 Years,2000,1446567
+South,18 to 24 Years,2010,1125108
+South,25 to 44 Years,1990,4782119
+South,25 to 44 Years,2000,5977649
+South,25 to 44 Years,2010,8368708
+South,45 to 64 Years,1990,4746856
+South,45 to 64 Years,2000,4556982
+South,45 to 64 Years,2010,4177233
+South,65 Years and Over,1990,3187797
+South,65 Years and Over,2000,3857234
+South,65 Years and Over,2010,5196109

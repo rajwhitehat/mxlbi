@@ -1,0 +1,68 @@
+<nav class="navbar navbar-expand-lg fixed-top" >
+    <a class="navbar-brand" href="#" style="font-weight: bold;"><span style="color: blue;">M</span><span style="color: green;">x</span> </a>
+    <button class="navbar-toggler" type="button" (click)="toggleSidebar()">
+        <!-- <span class="navbar-toggler-icon"></span> -->
+        <i class="fa fa-bars text-muted" aria-hidden="true"></i>
+    </button>
+    <div class="collapse navbar-collapse">
+        <!-- <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="{{ 'Search' | translate }}" >
+        </form> -->
+        <ul class="navbar-nav ml-auto">
+            <!-- <li class="nav-item d-none d-xl-block">
+                <a
+                    href="#"
+                    class="nav-link btn mt-1" role="button"
+                    style="padding: .375rem 1rem !important;border-color: #999;"
+                >
+                    {{ 'Download Now' | translate }}
+                </a>
+            </li> &nbsp; -->
+            <li class="nav-item"><div class="col-md-12">
+                </div>
+            </li> &nbsp;            
+            &nbsp;
+            
+            <li class="nav-item dropdown" ngbDropdown>
+                <a href="javascript:void(0)" class="nav-link" ngbDropdownToggle>
+                    <i class="fa fa-bell"></i> <b class="caret"></b><span class="sr-only">(current)</span>
+                </a>
+                <div class="dropdown-menu-right" ngbDropdownMenu>
+                    <a href="javascript:void(0)" class="dropdown-item">
+                        {{ 'Pending Task' | translate }} <span class="badge badge-info">6</span>
+                    </a>
+                    <a href="javascript:void(0)" class="dropdown-item">
+                        {{ 'In queue' | translate }} <span class="badge badge-info"> 13</span>
+                    </a>
+                    <a href="javascript:void(0)" class="dropdown-item">
+                        {{ 'Mail' | translate }} <span class="badge badge-info"> 45</span>
+                    </a>
+                    <li class="dropdown-divider"></li>
+                    <a href="javascript:void(0)" class="dropdown-item">
+                        {{ 'View All' | translate }}
+                    </a>
+                </div>
+            </li>
+          
+            <li class="nav-item dropdown" ngbDropdown>
+                <a href="javascript:void(0)" class="nav-link" ngbDropdownToggle>
+                    <i class="fa fa-user"></i>Vikas Kaushik <b class="caret"></b>
+                </a>
+                <div class="dropdown-menu-right" ngbDropdownMenu>
+                    <a class="dropdown-item" href="javascript:void(0)">
+                        <i class="fa fa-fw fa-user"></i> {{ 'Profile' | translate }}
+                    </a>
+                    <a class="dropdown-item" href="javascript:void(0)">
+                        <i class="fa fa-fw fa-envelope"></i> {{ 'Inbox' | translate }}
+                    </a>
+                    <a class="dropdown-item" href="javascript:void(0)">
+                        <i class="fa fa-fw fa-gear"></i> {{ 'Settings' | translate }}
+                    </a>
+                    <a class="dropdown-item" [routerLink]="['/login']" (click)="onLoggedout()">
+                        <i class="fa fa-fw fa-power-off"></i> {{ 'Log Out' | translate }}
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>

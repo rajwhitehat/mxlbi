@@ -1,0 +1,93 @@
+ #myGrid{
+    height: 300px !important;
+    width: 300px !important;
+}
+.inner-col{ height: 300px !important;
+    width: 300px !important;} 
+.outer {
+    display: flex;
+    height: 100%;
+}
+
+.inner-col {
+    width: 0;
+    flex-grow: 1;
+    height: 100%;
+}
+
+.factory-panel {
+    display: flex;
+    flex-direction: column;
+}
+
+.factory {
+    padding: 10px;
+    margin: 10px;
+    flex-grow: 1;
+}
+
+.factory-red {
+    background-color: #ffdddd;
+    border: 1px solid #ff8888;
+}
+
+.factory-green {
+    background-color: #ddffdd;
+    border: 1px solid #88ff88;
+}
+
+.factory-blue {
+    background-color: #ddddff;
+    border: 1px solid #8888ff;
+}
+
+.factory-bin {
+    background-color: lightgray;
+    border: 1px solid #888888;
+}
+
+.green-row {
+    background-color: #ddffdd !important;
+}
+
+.red-row {
+    background-color: #ffdddd !important;
+}
+
+.blue-row {
+    background-color: #ddddff !important;
+}
+
+/* chart css */
+/* You can add global styles to this file, and also import other style files */
+.node circle {
+    fill: #999;
+  }
+  
+  .node text {
+    font: 15px sans-serif;
+  }
+  
+  .node--internal circle {
+    fill: #555;
+  }
+  
+  .node--internal text {
+    text-shadow: 0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff;
+  }
+  
+  .link {
+    fill: none;
+    stroke: #555;
+    stroke-opacity: 0.4;
+    stroke-width: 1.5px;
+  }
+  
+  span.observablehq--function.observablehq--inspect {
+    display: none;
+  }
+  
+  span.observablehq--inspect {
+    display: none;
+  }
+  

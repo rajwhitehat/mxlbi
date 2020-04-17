@@ -1,0 +1,305 @@
+/* html, body {
+    height: 100%;
+  }
+  
+  body {
+    cursor: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/106114/cursor.png) 32 32, move;
+    background: #eeeeee;
+ 
+  } */
+  
+  /* *, *:before, *:after {
+    box-sizing: border-box;
+  }
+  
+  .container1 {
+    position: relative;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 2000px;
+    opacity: 0;
+    visibility: hidden;
+
+    cursor: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/106114/cursor.png), move;
+    cursor: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/106114/cursor.png) 32 32, move;
+  }
+  
+  .list-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 600px;
+    width: 33%;
+    margin-top: 20px;
+  }
+
+  .card{
+      border: none;
+  }
+
+  .card-header{
+    line-height: normal;
+    position: relative;
+    background-color: #e2e2e2;
+    font-weight: bold;
+    color: #444;
+  }
+
+  .card-header.after-heading:after {
+    content: '';
+    position: absolute;
+    background: #e2e2e2;
+    height: 100%;
+    width: 100%;
+    left: 100%;
+    padding: 0.25rem 1.25rem;
+    margin-bottom: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    top: 0;
+}
+  
+  .item-content {
+    height: 100%;
+    border: 0px solid rgba(123, 123, 123, 0.49804);
+    border-radius: 4px;
+    color: #999999;
+    line-height: normal;
+    padding-left: 0px;
+    font-size: 24px;
+    font-weight: 400;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px 0px;
+    overflow: auto;
+  }
+  
+  h2.main {
+    margin-top: 10px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    color: #444;
+    margin-bottom: -10px;
+}
+
+.chart-pop-up{
+  position: absolute;
+  right: 10px;
+  top:10px;
+} */
+
+/* new drag and drop */
+.container2 {
+  position: relative;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 2000px;
+  /* cursor: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/106114/cursor.png), move;
+  cursor: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/106114/cursor.png) 32 32, move; */
+}
+.container2 .card {
+  overflow: auto;
+  height: 380px;
+}
+
+.card-header{font-size: 20px;}
+
+
+.chart-pop-up
+{
+  float:right; margin-top: 3px;
+}
+.display-list-of-numbers {
+  height: 100px;
+  width: 100%;
+  border: 3px solid dodgerblue;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h4 {
+  margin-top: 25px;
+}
+.row {
+  margin-bottom: 20px;
+}
+.row .row {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+[class*="col-"] {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #eee;
+  background-color: rgba(86,61,124,.15);
+  border: 1px solid #ddd;
+  border: 1px solid rgba(86,61,124,.2);
+}
+
+hr {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.dndPlaceholder{
+  background-color: #ddd;
+  display: block;
+  min-height: 42px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: 1px solid rgba(86,61,124,.2);
+  position: relative;
+  padding-right: 15px;
+  padding-left: 15px;
+  
+}
+
+
+.dragDropBoxScroll {
+  height: 450px;
+  overflow: hidden;
+}
+
+
+
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: grey;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+}
+
+.legend {
+    font-size: 16px;
+    font-weight: bold;
+    text-anchor: middle;
+}
+path { 
+  stroke: steelblue;
+  stroke-width: 2;
+  fill: none;
+}
+
+text {
+  font: 10px sans-serif;
+}
+
+rect.background {
+  fill: white;
+}
+
+.axis {
+  shape-rendering: crispEdges;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+}
+
+
+
+.ng5-slider .ng5-slider-pointer:after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  border-radius: 4px;
+  background: #fff;
+}
+
+.node {
+  cursor: pointer;
+}
+
+.node:hover {
+  stroke: #000;
+  stroke-width: 1.5px;
+}
+
+.node--leaf {
+  fill: white;
+}
+
+.zoomlabel {
+  font: 11px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-anchor: middle;
+  text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
+}
+
+.zoomlabel,
+.node--root,
+.node--leaf {
+  pointer-events: none;
+}
+
+/* ranges slider css */
+.ng5-slider .ng5-slider-pointer {
+  width: 32px;
+  height: 12px !important;
+  top: -14px;
+  background-color: #bbb !important;
+  z-index: 3;
+  border-radius: 2px !important;
+}
+.ng5-slider .ng5-slider-pointer:after{
+  content:none !important;
+}
+.ng5-slider.vertical{
+  height:100px !important;
+}
+.rangeSliderBlock [class*="col-"]{
+  border: 1px solid #ccc;
+    margin-left: -1px;
+    margin-bottom: -1px;
+    background: #fff !important;
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 5px;
+}
+.ng5-slider.vertical .ng5-slider-bar {
+  bottom: 0;
+  left: 2px !important;
+  width: 32px !important;
+  height: 100% !important;
+  background: #eee !important;
+}
+div.sliderContent {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: #eeeeee;
+  left: 0;
+  text-align: center;
+}
+div.sliderContent span {
+  display: block;
+  font-size: 12px;
+  line-height: 18px;
+  border-bottom: 1px solid #ddd;
+}
+span.ng5-slider-span.ng5-slider-bubble.ng5-slider-model-value,
+span.ng5-slider-span.ng5-slider-bubble.ng5-slider-limit.ng5-slider-ceil,
+span.ng5-slider-span.ng5-slider-bubble.ng5-slider-limit.ng5-slider-floor{
+  display: none;
+}
+
+#MainChartContainer {margin-top: -15px; background-color: white;}
+#MainChartContainer [class*="col-"], .modal-body [class*="col-"] {background-color: white; border-width: 0px; padding-top: 0px; padding-bottom: 0px;}
+.dragDropBoxScroll{height:auto;}
+div.header {margin-bottom: 5px;}
+div.header > div { background-color: white; border-width: 0px; border-bottom-width: 1px; font-size: 12px; padding-bottom:5px; padding-top:0px;} 
+.container2 > div:first-child > div { border-width: 0px;}
+.container2 {height: auto;}
+.special{margin-bottom: 0px; padding-bottom: 0px;}
+.special [class*="col-"]:not(.col) {background-color: white; border-width: 0px; padding-bottom: 0px;}
+.remc{background-color: white; border-width: 0px;}
+.card-header{font-size: 14px;}
+.main{font-size: 24px;}

@@ -1,0 +1,7 @@
+{  
+    "/api/*": {  
+       "target": "http://python.n6.iworklab.com",  
+       "secure": false,  
+       "logLevel": "debug"  
+    }  
+ }  

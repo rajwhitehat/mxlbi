@@ -1,0 +1,100 @@
+<!-- <div [@routerTransition]>
+  <form name="form" [formGroup]="form" #chartsForm="ngForm"> -->
+    <div class="row header">
+      <div class="col-md-4">
+        <h2 class="main">Adspend</h2>
+      </div>
+      <div class="col-md-4"></div>
+      <div class="col-md-4" style="display:none;">
+      </div>
+      <div class="col-md-4" style="text-align: right;">
+      </div>
+    </div>
+    <div class="row special">
+        <div class="col-md-6">
+          <!-- <app-linechart [childMessage]="lcparentMessage"></app-linechart> -->
+          <app-linechartas [inputvFilterData]="vFilterData" [childMessage]="lcparentMessage"></app-linechartas>
+        </div>
+      
+      <div class="col-md-6">
+        <!-- <div class="col col-sm-12" style="padding-left:0px;padding-right: 0px ;"> -->
+        <div class="card mb-3">
+          <div class="card-header" style="background-color: #e2e2e2; font-weight: bold;">
+            <i class="fa fa-balance-scale fa-fw"></i>Settings
+          </div>
+          <div class="card-body rangeSliderBlock">
+            <div class="row">
+              <div class="col-2">
+                <ng5-slider [(value)]="verticalSlider1.value" (valueChange)="valueChangeFun()" 
+                [options]="verticalSlider1.options"></ng5-slider>
+                <div class="sliderContent">
+                  <span> tv spons </span>
+                  <span>{{verticalSlider1.value}} </span>
+                </div>
+              </div>
+              <div class="col-2">
+                <ng5-slider [(value)]="verticalSlider2.value" (valueChange)="valueChangeFun()" [options]="verticalSlider2.options"></ng5-slider>
+                <div class="sliderContent">
+                  <span> tv cric </span>
+                  <span> {{verticalSlider2.value}} </span>
+                </div>
+              </div>
+              <div class="col-2">
+                <ng5-slider [(value)]="verticalSlider3.value" (valueChange)="valueChangeFun()" [options]="verticalSlider3.options"></ng5-slider>
+                <div class="sliderContent">
+                  <span> tv ron </span>
+                  <span> {{verticalSlider3.value}} </span>
+                </div>
+              </div>
+              <div class="col-2">
+                <ng5-slider [(value)]="verticalSlider4.value" (valueChange)="valueChangeFun()" [options]="verticalSlider4.options"></ng5-slider>
+                <div class="sliderContent">
+                  <span> tv radio </span>
+                  <span> {{verticalSlider4.value}} </span>
+                </div>
+              </div>
+              <div class="col-2">
+                <ng5-slider [(value)]="verticalSlider5.value" (valueChange)="valueChangeFun()" [options]="verticalSlider5.options"></ng5-slider>
+                <div class="sliderContent">
+                  <span> npp </span>
+                  <span> {{verticalSlider5.value}} </span>
+                </div>
+              </div>
+              <div class="col-2">
+                <ng5-slider [(value)]="verticalSlider6.value" (valueChange)="valueChangeFun()" [options]="verticalSlider6.options"></ng5-slider>
+                <div class="sliderContent">
+                  <span> magazine </span>
+                  <span> {{verticalSlider6.value}} </span>
+                </div>
+              </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+           <app-barreversechart [inputvFilterData]="vFilterData" [childMessage]="barReverseMessage"></app-barreversechart>
+      </div>
+      <div class="col-md-6">
+        <div class="card card-default">
+          <div class="card-header" style="background-color: #e2e2e2; font-weight: bold;">
+              <i class="fa fa-line-chart fa-fw"></i>        
+              {{childMessage}} 
+          </div>
+          <div class="card-body">
+              <!-- <svg></svg> -->
+              <!-- <div class="barReversechartas" id="barReversechartas" >
+                  <svg id="reversechart"></svg>
+              </div> -->
+              <div class="barReversechartas"  >                
+                  <svg  id="reversechart2"></svg>
+              </div>
+              <!-- <div class="barReversechartas" *ngIf="childMessage=='reversechart2'" >
+                  <svg  id="reversechart2"></svg>
+            
+              </div> -->
+          </div>
+      </div>
+      </div>
+    </div>
+  <!-- </form> -->
+<!-- </div> -->

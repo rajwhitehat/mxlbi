@@ -1,0 +1,13 @@
+<div class="card card-default">
+    <div class="card-header" style="background-color: #e2e2e2; font-weight: bold;">
+        <i class="fa fa-line-chart fa-fw"></i>
+        {{childMessage}} 
+        <!-- Sales Graph -->
+    </div>
+    <div class="card-body">
+        <canvas baseChart height="130" [datasets]="lineChartData" [labels]="lineChartLabels"
+            [options]="lineChartOptions" [chartType]="lineChartType"
+            (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
+        </canvas>
+    </div>
+</div>

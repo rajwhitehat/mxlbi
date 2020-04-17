@@ -1,0 +1,11 @@
+<div class="card card-default">
+    <div class="card-header after-heading" style="background-color: #e2e2e2; font-weight: bold;">
+        <i class="fa fa-line-chart fa-fw"></i> Calendar Heatmap
+       
+    </div>
+    <div class="card-body">
+        <calendar-heatmap [data]="dataH" [color]="color" [overview]="overview"
+            (handler)="print($event)" (onChange)="handleOnChange($event)">
+        </calendar-heatmap>
+    </div>
+</div>

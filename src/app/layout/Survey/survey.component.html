@@ -1,0 +1,40 @@
+<div [@routerTransition]>
+    <!-- <form name="form" [formGroup]="form" #dashboardForm = "ngForm"> -->
+        <div class="row header">
+            <div class="col-md-4"><h2 class="main">Survey</h2></div>
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <button  id="btnPopup1"  style="display:none;" (click)="open(content)"></button>                                             
+            </div>
+        </div>
+            <div class="row special">
+                <div class="card mb-3">
+                    <div class="card-header" style="background-color: #e2e2e2; font-weight: bold;">
+                        <i class="fa fa-tasks fa-fw"></i>Radial Cluster Dendrogram
+                    </div>
+                    <div style="width: 100%;">
+                        <svg id="radial" style="width: 1200px; height:1000px;"></svg>
+                    </div>
+                            
+                </div>
+            </div>    
+            <div class="row special mb-3">          
+                <div class="card mb-3">
+                    <div class="card-header" style="background-color: #e2e2e2; font-weight: bold;">
+                        <i class="fa fa-tasks fa-fw"></i> Vartical Bar Chart
+                    </div>                  
+                    <div style="width: 100%;">
+                         <p id="varticalBar"></p> 
+                    </div>           </div>
+            </div>
+            <div class="row special mb-3">
+                    <app-verticalstackedbar style="width: 100%;"></app-verticalstackedbar>         
+                
+            </div>
+            <div class="row special"> 
+                    <app-groupbarchart style="width: 100%;"></app-groupbarchart>
+                            
+            </div>       
+                
+</div>
+            

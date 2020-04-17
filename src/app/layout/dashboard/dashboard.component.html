@@ -1,0 +1,278 @@
+<style>
+  .chat-panel{
+  margin-bottom: 20px;
+  }
+  </style>
+<div [@routerTransition]>
+    <form name="form" [formGroup]="form" #dashboardForm="ngForm">
+        <div class="row header">
+            <div class="col-md-8">
+                <h2 class="main">Main</h2>
+                
+            </div>
+            <div class="col-md-4" style="display:none;">
+              <button id="btnPopup1" (click)="open(content)"></button>
+          </div>
+            <div class="col-md-4" style="text-align: right;"><button class="btn btn-primary" id="btnSaveChartArrangement" (click)="saveChartArrangement()">Save Chart Aggangement</button></div>
+            <!-- <div class="col-md-4"></div>
+            <div class="col-md-4" style="display:none;">
+                <button id="btnPopup1" (click)="open(content)"></button>
+            </div>
+            <div class="col-md-4" style="text-align: right;">
+                <ng-multiselect-dropdown formControlName="drpbrand" [placeholder]="'Select Brands'"
+                    [data]="dropdownList" [(ngModel)]="selectedItems" [settings]="dropdownSettings"
+                    (onSelect)="onItemSelect($event)" (onSelectAll)="onSelectAll($event)"
+                    style="width:150px !important;">
+                </ng-multiselect-dropdown>
+            </div> -->
+        </div>
+       
+        <ngb-alert [type]="alert.type" (close)="closeAlert(alert)" *ngFor="let alert of alerts">{{ alert.message }}
+        </ngb-alert>
+
+        <!-- <section class="container"></section> --> 
+         <!-- <div class="container1" style="background-color: yellow;" >
+  
+          <div class="list-item" id="alpha">
+            <div class="item-content">
+              <span class="order">1</span> Alpha
+            </div>
+          </div>
+          
+          <div class="list-item" id="bravo">
+            <div class="item-content">
+              <span class="order">2</span> Bravo
+            </div>
+          </div>
+          
+          <div class="list-item" id="charlie">
+            <div class="item-content">
+              <span class="order">3</span> Charlie
+            </div>
+          </div>
+          
+          <div class="list-item" id="delta">
+            <div class="item-content">
+              <span class="order">4</span> Delta
+            </div>
+          </div>
+           
+          <div class="list-item" id="echo">
+            <div class="item-content">
+              <span class="order">5</span> Echo
+            </div>
+          </div>
+          
+          <div class="list-item" id="foxtrot">
+            <div class="item-content">
+              <span class="order">6</span> Foxtrot
+            </div>
+          </div>
+          
+          <div class="list-item" id="gulf">
+            <div class="item-content">
+              <span class="order">7</span> Gulf
+            </div>
+          </div>
+          
+          <div class="list-item" id="hotel">
+            <div class="item-content">
+              <span class="order">8</span> Hotel
+            </div>
+          </div>
+          
+          <div class="list-item" id="india">
+            <div class="item-content">
+              <span class="order">9</span> India
+            </div>
+          </div>
+          
+        </div>            -->
+         <div class="container2">                                                
+          <div class="dndPlaceholder col-md-12"
+    #placeholder></div>
+          <div class="row">
+            <div class="col-md-12"
+              [dndList]
+              [dndPlaceholder]="placeholder"
+              [dndModel]="simpleList">
+              <div id="MainChartContainer" class="row">
+              <div *ngFor="let item of simpleList" id="{{item.id}}"
+                class="col-md-4 dragDropBoxScroll"
+                [dndType]="'item'"
+                (dndMoved)="removeItem(item, simpleList)"
+                [dndDraggable]
+                [dndObject]="item">
+                <i class="fa fa-arrows" *ngIf="item.divid!=''" aria-hidden="true"></i>
+        <i class="fa fa-line-chart fa-fw chart-pop-up" *ngIf="item.divid!=''" (click)="showFullScreenParent(item.divid)"></i>
+                  <app-linechart *ngIf="item.divid=='linechartDiv'" [childMessage]="lcparentMessage"></app-linechart>
+                  <!-- <app-snippets *ngIf="item.divid=='snippetsDiv'"></app-snippets> -->
+                  <div *ngIf="item.divid=='snippetsDiv'" class="chat-panel card card-default">
+                    <div class="card-header" style="background-color: #e2e2e2; font-weight: bold;">
+                        <i class="fa fa-id-card fa-fw"></i>Snippets
+                    </div>                    
+                    <div class="card-body"><img src="../../../assets/images/Snippets.png" width="100%" height="100%"></div>
+                  </div>
+                  <!-- <app-calenderheatchart *ngIf="item.divid=='calenderheatchartDiv'"></app-calenderheatchart> -->
+                  <div *ngIf="item.divid=='calenderheatchartDiv'" class="chat-panel card card-default">
+                    <div class="card-header" style="background-color: #e2e2e2; font-weight: bold;">
+                        <i class="fa fa-id-card fa-fw"></i>Calender Heat Map
+                    </div>                    
+                    <div class="card-body"><img src="../../../assets/images/CalenderHeatMap.png" width="100%" height="100%"></div>
+                  </div>
+                  <!-- <app-tablechart *ngIf="item.divid=='tablechartDiv'"></app-tablechart> -->
+                  <!-- <app-statechart [chartID]="'mapdiv'" *ngIf="item.divid=='indiamapchartDiv'"></app-statechart> -->
+                  <div *ngIf="item.divid=='indiamapchartDiv'" class="chat-panel card card-default">
+                    <div class="card-header" style="background-color: #e2e2e2; font-weight: bold;">
+                        <i class="fa fa-id-card fa-fw"></i>State Map
+                    </div>                    
+                    <div class="card-body"><img src="../../../assets/images/StateChart.png" width="100%" height="100%"></div>
+                  </div>
+                  <!-- <app-sunbrustchart *ngIf="item.divid=='sunbrustchartDiv'"></app-sunbrustchart> -->
+                  <div *ngIf="item.divid=='sunbrustchartDiv'" class="chat-panel card card-default">
+                    <div class="card-header" style="background-color: #e2e2e2; font-weight: bold;">
+                        <i class="fa fa-id-card fa-fw"></i>Sun Brust
+                    </div>                    
+                    <div class="card-body"><img src="../../../assets/images/SunBrust.png" width="100%" height="100%"></div>
+                  </div>
+                  <div *ngIf="item.divid=='doubleverticalchartDiv'" class="chat-panel card card-default">
+                    <div class="card-header" style="background-color: #e2e2e2; font-weight: bold;">
+                        <i class="fa fa-id-card fa-fw"></i>DoubleVertical
+                    </div>                    
+                    <div class="card-body"><img src="../../../assets/images/DoubleVertical.png" width="100%" height="100%"></div>
+                  </div>
+                  <!-- <app-doubleverticalchart (messageEvent)="receiveMessage($event)" *ngIf="item.divid=='doubleverticalchartDiv'"></app-doubleverticalchart>                  -->
+                  <!-- <app-hirarchical-bar-chart *ngIf="item.divid=='hirbarchartDiv'"></app-hirarchical-bar-chart> -->
+                  <div *ngIf="item.divid=='hirbarchartDiv'" class="chat-panel card card-default">
+                    <div class="card-header" style="background-color: #e2e2e2; font-weight: bold;">
+                        <i class="fa fa-id-card fa-fw"></i>Sales Data
+                    </div>                    
+                    <div class="card-body"><img src="../../../assets/images/SalesData.png" width="100%" height="100%"></div>
+                  </div>
+                  <!-- <app-litopeelchart *ngIf="item.divid=='line1Div'"></app-litopeelchart>                   -->
+                  <div *ngIf="item.divid=='line1Div'" class="chat-panel card card-default">
+                    <div class="card-header" style="background-color: #e2e2e2; font-weight: bold;">
+                        <i class="fa fa-id-card fa-fw"></i>Football Data
+                    </div>                    
+                    <div class="card-body"><img src="../../../assets/images/FootballData.png" width="100%" height="100%"></div>
+                  </div>
+                  <app-litopil1chart  *ngIf="item.divid=='litopil1Div'"></app-litopil1chart>
+                  
+                  <!-- <app-hiphop *ngIf="item.divid=='hiphopDiv'"></app-hiphop>  -->
+                  <div *ngIf="item.divid=='hiphopDiv'" class="chat-panel card card-default">
+                    <div class="card-header" style="background-color: #e2e2e2; font-weight: bold;">
+                        <i class="fa fa-id-card fa-fw"></i>Hip Hop
+                    </div>                    
+                    <div class="card-body"><img src="../../../assets/images/HipHop.png" width="100%" height="100%"></div>
+                  </div>
+                  <!-- <app-zoomablecirclepacking *ngIf="item.divid=='zoomDiv'"></app-zoomablecirclepacking> -->
+                  <div *ngIf="item.divid=='zoomDiv'" class="chat-panel card card-default">
+                    <div class="card-header" style="background-color: #e2e2e2; font-weight: bold;">
+                        <i class="fa fa-id-card fa-fw"></i>Zoomable Circle Parking
+                    </div>                    
+                    <div class="card-body"><img src="../../../assets/images/ZoomableCircle.png" width="100%" height="100%"></div>
+                  </div>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+<!-- <div id="chartContainer" class="container1">
+</div>  -->
+         <!-- <div style="display:none ;" >
+            <div class="row mb-3">
+                <div class="list-item" id="calenderheatchartDiv">                    
+                   <div class="item-content">
+                    <app-calenderheatchart *ngIf="iScalenderheatchartDiv"></app-calenderheatchart>                    
+                </div>
+                </div>               
+            </div>
+            <div class="row">
+                <div class="list-item" id="tablechartDiv">
+                    <div class="item-content">
+                    <app-tablechart *ngIf="iStablechartDiv"></app-tablechart>
+                </div>
+                </div>
+                <div class="list-item" id="indiamapchartDiv">
+                    <div class="item-content">
+                   <app-indiamapchart *ngIf="iSindiamapchartDiv"></app-indiamapchart>                    
+                    <app-statechart *ngIf="iSindiamapchartDiv"></app-statechart>
+                </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="list-item" id="sunbrustchartDiv">
+                    <div class="item-content">
+                    <app-sunbrustchart *ngIf="iSsunbrustchartDiv"></app-sunbrustchart>                  
+                </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="list-item" id="doubleverticalchartDiv">
+                    <div class="item-content">
+                    <app-doubleverticalchart (messageEvent)="receiveMessage($event)" *ngIf="iSdoubleverticalchartDiv"></app-doubleverticalchart>                   
+                </div>
+                </div>
+            </div> 
+            <div class="row mb-3">
+                <div class="list-item" id="linechartDiv">
+                    <div class="item-content">
+                    <app-linechart *ngIf="iSlinechartDiv" [childMessage]="lcparentMessage"></app-linechart> 
+                    </div>                  
+                </div>
+                <div class="list-item" id="snippetsDiv">
+                    <div class="item-content">
+                    <app-snippets *ngIf="iSsnippetsDiv"></app-snippets>
+                    </div>
+                </div>
+                <div class="list-item" id="hirbarchartDiv">
+                    <div class="item-content">
+                    <app-hirarchical-bar-chart *ngIf="iShirbarchartDiv"></app-hirarchical-bar-chart>
+                    </div>
+                </div>
+                <div class="list-item" id="line1Div">
+                  <div class="item-content">
+                  <app-litopeelchart *ngIf="iSline1Div"></app-litopeelchart>
+                  </div>
+              </div>                
+            </div>
+         </div>                       -->
+    </form>
+</div>
+<ng-template #content let-modal >
+    <div class="modal-header" >
+        <h4 class="modal-title" id="modal-basic-title">Sales Details</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+      <div class="row">
+        <div class="col-md-2"><span>Analysis Type:</span>{{rightFilterCondition["analysisType"]=="undefined"?"":this.rightFilterCondition["analysisType"]}}</div>
+        <div class="col-md-2"><span>From Date:</span>{{rightFilterCondition["from"]=="undefined"?"":this.rightFilterCondition["from"]}}</div>
+        <div class="col-md-2"><span>To Date:</span>{{rightFilterCondition["to"]=="undefined"?"":this.rightFilterCondition["to"]}}</div>
+        <div class="col-md-2"><span>Category:</span>{{rightFilterCondition["category"]=="undefined"?"":this.rightFilterCondition["category"]}}</div>
+        <div class="col-md-2"><span>Region:</span>{{rightFilterCondition["region"]=="undefined"?"":this.rightFilterCondition["region"]}}</div>
+      </div>
+        <div class="row">
+            <div class="col-md-12">             
+              <app-linechart *ngIf="popupDivID=='linechartDiv'" [childMessage]="lcparentMessage"></app-linechart>
+              <app-snippets *ngIf="popupDivID=='snippetsDiv'"></app-snippets>
+              <app-calenderheatchart *ngIf="popupDivID=='calenderheatchartDiv'"></app-calenderheatchart>
+              <app-tablechart *ngIf="popupDivID=='tablechartDiv'"></app-tablechart>
+              <app-statechart *ngIf="popupDivID=='indiamapchartDiv'"></app-statechart>
+              <app-sunbrustchart [(filterCondition)]="rightFilterCondition" *ngIf="popupDivID=='sunbrustchartDiv'"></app-sunbrustchart>
+              <app-doubleverticalchart *ngIf="popupDivID=='doubleverticalchartDiv'"></app-doubleverticalchart>                 
+              <app-hirarchical-bar-chart *ngIf="popupDivID=='hirbarchartDiv'"></app-hirarchical-bar-chart>
+              <app-litopeelchart *ngIf="popupDivID=='line1Div'"></app-litopeelchart>                  
+              <app-litopil1chart  *ngIf="popupDivID=='litopil1Div'"></app-litopil1chart>
+             <app-hiphop *ngIf="popupDivID=='hiphopDiv'"></app-hiphop>
+             <app-zoomablecirclepacking *ngIf="popupDivID=='zoomDiv'"></app-zoomablecirclepacking>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="modal-footer">
+    </div>
+</ng-template>

@@ -1,0 +1,41 @@
+<nav class="sidebar" [ngClass]="{sidebarPushRight: isActive, collapsed: collapsed}">
+    <div class="list-group">
+        <a routerLink="/dashboard" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-dashboard"></i>&nbsp;
+            <span>{{ 'Main' | translate }}</span>
+        </a>
+        <a [routerLink]="['/charts']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-bar-chart-o"></i>&nbsp;
+            <span>{{ 'Social' | translate }}</span>
+        </a>
+        <a [routerLink]="['/survey']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-table"></i>&nbsp;
+            <span>{{ 'Survey' | translate }}</span>
+        </a>
+        <a [routerLink]="['/smprofiling']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-edit"></i>&nbsp;
+            <span>{{ 'SM Profiling' | translate }}</span>
+        </a> 
+        <a [routerLink]="['/snippets']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-wpexplorer"></i>&nbsp;
+            <span>{{ 'Snippets' | translate }}</span>
+        </a> 
+        <a [routerLink]="['/adspend']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-id-card"></i>&nbsp;
+            <span>{{ 'Adspend' | translate }}</span>
+        </a> 
+        <a [routerLink]="['/salesanalysis']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-id-card"></i>&nbsp;
+            <span>{{ 'Sales Analysis' | translate }}</span>
+        </a> 
+        <a [routerLink]="['/chartallotment']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-wpexplorer"></i>&nbsp;
+            <span>{{ 'Chart Allotment' | translate }}</span>
+        </a>
+                               
+    </div>
+    <div class="toggle-button" [ngClass]="{collapsed: collapsed}" (click)="toggleCollapsed()">
+        <i class="fa fa-fw fa-angle-double-{{collapsed?'right':'left'}}"></i>&nbsp;
+        <span>{{ 'Collapse Sidebar' | translate }}</span>
+    </div>
+</nav>

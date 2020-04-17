@@ -1,0 +1,17 @@
+
+<div class="card card-default">
+  <div class="card-header" style="background-color: #e2e2e2; font-weight: bold;">
+      <i class="fa fa-line-chart fa-fw"></i>        
+      Brand Wise Sales Vs Social 
+  </div>
+  <div class="card-body">
+<div class="row">
+  <input type="checkbox" (click)="changeStatus($event)" /> <span style="font-size: 13px;">Is Weekly</span>
+<p id="chartrnd"></p>
+</div>
+<div class="row">
+<button (click)="startMotion();" class="btn btn-sm mr-2"><i class="fa fa-play-circle-o fa-3x"></i></button>
+<button (click)="stopMotion();" class="btn btn-sm"><i class="fa fa-pause-circle-o fa-3x"></i></button>
+</div> 
+</div>
+</div>

@@ -1,0 +1,22 @@
+<form name="{{childMessage}}" [formGroup]="rcform" #reversebarForm="ngForm">
+<div class="card card-default">
+    <div class="card-header" style="background-color: #e2e2e2; font-weight: bold;">
+        <i class="fa fa-line-chart fa-fw"></i>        
+        {{childMessage}} 
+    </div>
+    <div class="card-body">
+        <!-- <svg></svg> -->
+        <!-- <div class="barReversechartas" id="barReversechartas" >
+            <svg id="reversechart"></svg>
+        </div> -->
+        <div class="barReversechartas"  >
+            <svg  id="reversechart"></svg>
+            <!-- <svg  id="reversechart2"></svg> -->
+        </div>
+        <!-- <div class="barReversechartas" *ngIf="childMessage=='reversechart2'" >
+            <svg  id="reversechart2"></svg>
+      
+        </div> -->
+    </div>
+</div>
+</form>

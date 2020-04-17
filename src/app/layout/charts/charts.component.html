@@ -1,0 +1,195 @@
+<div [@routerTransition] >
+    <form name="form" [formGroup]="form" #chartsForm = "ngForm">
+    <div class="row header">
+        <div class="col-md-4"><h2 class="main">Social</h2></div>
+        <div class="col-md-4"></div>
+        <div class="col-md-4" style="display:none;">                                            
+        </div>
+        <div class="col-md-4" style="text-align: right;">
+            <ng-multiselect-dropdown 
+            [placeholder]="'Select Brands'"
+            [data]="dropdownList"
+            [(ngModel)]="selectedItems"
+            [ngModelOptions]="{standalone: true}"
+            [settings]="dropdownSettings"
+            (onSelect)="onItemSelect($event)"
+            (onSelectAll)="onSelectAll($event)" style="width:150px !important;">
+          </ng-multiselect-dropdown>
+        </div>
+    </div>
+    <div class="row special">
+         <div class="col col-lg-6 remc">
+            <div class="card mb-3">
+                <div class="card-header" style="background-color: #e2e2e2; font-weight: bold;">
+                    <i class="fa fa-id-card fa-fw"></i> Number Of Mentions
+                </div>
+                <div class="card-body row" style="margin:5px; padding-left:1rem; padding-right:1rem; margin-top:1px; margin-bottom:1px;">
+                    <div class="card text-white bg-secondary col-md-3" style="margin-right:1px;">
+                        <div class="card-header" style="padding: 0.75rem 1rem">
+                            <div class="row">
+                                <div class="col col-xs-3 text-center" style="padding: 0px;">
+                                    <i class="fa fa-facebook-square" style="font-size:48px"></i>
+                                </div>
+                                <div class="col col-xs-9 text-center" style="padding: 0px;">
+                                    <div class="d-block huge">300</div>
+                                </div>
+                            </div>
+                        </div>                           
+                    </div>    
+                    <div class="card text-white bg-secondary col-md-3" style="margin-right:1px;">
+                        <div class="card-header" style="padding: 0.75rem 1rem">
+                            <div class="row">
+                                <div class="col col-xs-3 text-center" style="padding: 0px;">
+                                    <i class="fa fa-twitter-square" style="font-size:48px"></i>
+                                </div>
+                                <div class="col col-xs-9 text-center" style="padding: 0px;">
+                                    <div class="d-block huge">250</div>
+                                </div>
+                            </div>
+                        </div>                           
+                    </div>  
+                    <div class="card text-white bg-secondary col-md-3" style="margin-right:1px;">
+                        <div class="card-header" style="padding: 0.75rem 1rem">
+                            <div class="row">
+                                <div class="col col-xs-3 text-center" style="padding: 0px;">
+                                    <i class="fa fa-youtube" style="font-size:48px;color:red"></i>
+                                </div>
+                                <div class="col col-xs-9 text-center" style="padding: 0px;">
+                                    <div class="d-block huge">100</div>
+                                </div>
+                            </div>
+                        </div>                           
+                    </div>   
+                    <div class="card text-white bg-secondary col-md-3" style="margin-right:-5px;">
+                        <div class="card-header" style="padding: 0.75rem 1rem">
+                            <div class="row">
+                                <div class="col col-xs-3 text-center" style="padding: 0px;">
+                                    <i class="fa fa-instagram" style="font-size:48px;color:pink"></i>
+                                    <!-- <i class="fa fa-twitter-square fa-5x"></i> -->
+                                </div>
+                                <div class="col col-xs-9 text-center" style="padding: 0px;">
+                                    <div class="d-block huge">150</div>
+                                </div>
+                            </div>
+                        </div>                           
+                    </div>               
+                </div>
+            </div>                      
+         </div>       
+         <div class="col col-lg-6 remc"> 
+            <div class="card mb-3">
+                <div class="card-header" style="background-color: #e2e2e2; font-weight: bold;">
+                    Number Of Male/Female
+                </div>
+                <div class="card-body row" style="margin:5px; padding-left:1rem; padding-right:1rem; margin-top:1px; margin-bottom:1px;">
+                    <div class="card text-white col-md-3" style="margin-right:1px; border:0px;">
+                    </div>
+                    <div class="card text-white bg-secondary col-md-3" style="margin-right:1px;">
+                        <div class="card-header" style="padding: 0.75rem 1rem">
+                            <div class="row">
+                                <div class="col col-xs-3 text-center" style="padding: 0px;">
+                                    <i class="fa fa-male" aria-hidden="true" style="font-size:48px"></i>
+                                </div>
+                                <div class="col col-xs-9 text-center" style="padding: 0px;">
+                                    <div class="d-block huge">300</div>
+                                </div>
+                            </div>
+                        </div>                           
+                    </div>                        
+                    <div class="card text-white bg-secondary col-md-3"  style="margin-right:1px;">
+                        <div class="card-header" style="padding: 0.75rem 1rem">
+                            <div class="row">
+                                <div class="col col-xs-3 text-center" style="padding: 0px;">
+                                    <i class="fa fa-female" aria-hidden="true" style="font-size:48px"></i>
+                                </div>
+                                <div class="col col-xs-9 text-center" style="padding: 0px;">
+                                    <div class="d-block huge">300</div>
+                                </div>
+                            </div>
+                        </div>                           
+                    </div>                                 
+                </div>
+            </div>         
+        </div>
+    </div>
+    <div class="row special">
+        <div class="col col-md-6 remc">
+            <div class="card mb-3">
+                <div class="card-header" style="background-color: #e2e2e2; font-weight: bold;">
+                    <i class="fa fa-pie-chart fa-fw"></i>Number Of Mentions
+                </div>
+                <div class="card-body">
+                    <div class="row header">
+                        <div class="col-md-6"><h6> Filters : Facebook</h6></div>
+                        <div class="col-md-6" style="margin-top:-5px;" id="multicharts"> 
+                            <ng-multiselect-dropdown
+                            [placeholder]="'Select Chart'"
+                            [data]="dropdownListChart"
+                            [settings]="dropdownSettingsChart"
+                            [(ngModel)]="selectedItemsChart"
+                            [ngModelOptions]="{standalone: true}"
+                            (onSelect)="onItemSelectChart($event)">
+                          </ng-multiselect-dropdown>
+                        </div>
+                    </div>
+                    
+                   
+                    <canvas baseChart height="130px" [data]="doughnutChartData" [options]="doughnutChartOptions" [labels]="doughnutChartLabels" [chartType]="doughnutChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
+                    </canvas>
+                    <!--
+                    <canvas baseChart height="180px" [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions" [colors]="lineChartColors" [chartType]="lineChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
+                    </canvas>-->
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 remc">
+            <!-- <div class="col col-sm-12" style="padding-left:0px;padding-right: 0px ;"> -->
+                <div class="card mb-3">
+                    <div class="card-header" style="background-color: #e2e2e2; font-weight: bold;">
+                        <i class="fa fa-balance-scale fa-fw"></i>Sentiment Meter
+                    </div>
+                    <div class="card-body">
+                        <fusioncharts
+                        width="450"
+                        height="200"
+                        type="AngularGauge"
+                        [dataSource]="dataSource">
+                      </fusioncharts>
+                    </div>           
+                </div>       
+            </div>
+    </div>
+    <div class="row special">
+        
+        <div class="col-md-6">
+            <div class="card mb-3">
+                <div class="card-header" style="background-color: #e2e2e2; font-weight: bold;">
+                    <i class="fa fa-map-marker fa-fw"></i>Geo Distribution
+                </div>
+                <div class="card-body">
+                    <fusioncharts
+                    width="100%"
+                    height="510"
+                    type="world"
+                    [dataSource]="dataSourceMap">
+                </fusioncharts>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="col-md-6">
+            <div class="card mb-3">
+                <div class="card-header" style="background-color: #e2e2e2; font-weight: bold;">
+                    <i class="fa fa-map-marker fa-fw"></i>Motion Chart
+                </div>
+                <div class="card-body">
+                    <div id="motionChart">
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <div class="col-md-6">
+         <app-geo-mercator></app-geo-mercator> </div>
+    </div>
+</form>
+</div>

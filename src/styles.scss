@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+/*radial chart graph*/
+.node {
+    circle {
+      fill: #999;
+    }
+  
+    text {
+      font: 10px sans-serif;
+    }
+  }
+  
+  .node--internal {
+    circle {
+      fill: #555;
+    }
+  
+    text {
+      text-shadow: 0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff;
+    }
+  }
+  
+  .link {
+    fill: none;
+    stroke: #555;
+    stroke-opacity: 0.4;
+    stroke-width: 1.5px;
+  }
